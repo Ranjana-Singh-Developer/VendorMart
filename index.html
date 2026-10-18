@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VendorMart</title>
+</head>
+<body >
+    <!--header section-->
+
+    <header style="text-align: center;">
+        <h1>VendorMart</h1>
+        <p>Online Vendor Registration Portal</p>
+        <nav>
+            <a href="#registration">Register|</a>
+            <a href="#products">Products|</a>
+            <a href="#help">Help</a>
+        </nav>
+    </header>
+    <hr>
+    <!--Introduction Section-->
+
+    <section id="introduction" style="text-align: center;">
+       <h2>Become a Vendor</h2> 
+       <p>Join VendorMart and start selling your products online. Complete the registration form below.</p>
+       <img src="./vendormart.jpg" alt="Vendor Mart " width="100%" >
+       
+    </section>
+
+    <hr>
+
+    <!--Popular Product Categories-->
+
+    <section id="products">
+    <h2>Popular Product Categories</h2>
+    <div>
+        <img src="./Mobiles & Accessories.jpg"  alt="Mobiles & Accessories" width="500px" >
+        <p>Mobiles & Accessories</p>
+        <img src="./laptop.jpg" alt="Laptops" width="500px">
+        <p>Laptops</p>
+        <img src="./headphones.jpg" alt="Headphones" width="500px"> 
+        <p>Headphones</p>
+    </div>
+   </section >
+
+    <hr>
+   <!--Vendor Registration Section-->
+    <section id="registration">
+         <h2>Vendor Registration</h2>
+    
+     <form action="/submit-Registration" method="post" novalidate>
+        <!--Account Details-->
+        <fieldset>
+            <legend>Account Details</legend><br>
+            <label for="vn"> Vendor Name</label><br><br>
+            <input type="text" id="vn" name="vn" placeholder="Enter Vendor Name" required minlength="3" maxlength="30" autofocus >
+            <br><br>
+            <label for="pw">Password</label><br><br>
+            <input type="text" id="pw" name="pw" placeholder="Enter Password"  required minlength="8" maxlength="20" size="20">
+            <br><br>
+            <label for="em">Business Email</label><br>
+            <input type="text"  id="em" name="em" placeholder="Enter Business Email" required size="30">
+            <br><br>
+        </fieldset><br>
+
+        <!--Bussiness Details -->
+        <fieldset>
+            <legend>Business Details</legend><br>
+            
+            <label for="website" >Company Website</label><br><br>
+            <input type="url" id="website" name="website" placeholder="https://example.com"  required size="30"><br>
+            <br><br>
+
+            <label for ="searchproducts" >Search Products</label><br><br>
+           <input type="text" id="searchproducts" name="searchproducts" list="productList" placeholder="Search Products">
+          
+          <br> <datalist id="productList">
+            <option value="Mobiles"></option>
+            <option value="Laptops"></option>
+            <option value="Headphones"></option>
+            <option value="Gaming"></option>
+          </datalist> 
+            <br><br>
+
+            <label for="qty">Quantity</label><br><br>
+            <input type="number" id="qty" name="qty" value="1" readonly size="5">
+            <br>
+         <br>  
+        </fieldset><br>
+        <!--Vendor Verification-->
+        <fieldset>
+            <legend>Vendor Verification</legend><br>
+            <label for="vendorId">Vendor ID</label><br><br>
+            <br>
+            <input type="text" id="vendorId" name="vendorId" value="VM1024" readonly ><br>
+            <br>
+            <label for="number" >GST Number</label><br><br>
+            <input type="text" id="number" name="number " placeholder="29ABCDE1234F1Z5" ><br>
+            <br> <br> 
+        </fieldset>
+        <!--Additional Information-->
+        <fieldset>
+           <legend>Additional Information</legend><br>
+           <label for="addr" >Business Address</label><br><br>
+           <textarea  id="addr" name="addr" rows="5" cols="40"></textarea><br>
+           <br>
+           <label for="vt">Vendor Type</label><br><br>
+           <input type="radio" id="mf" name="vt" value="Manufacturer"/>
+           <label for="mf">Manufacturer</label>
+           <input type="radio" id="sp" name="vt" value="Supplier "/>
+           <label for="sp">Supplier</label>
+           <input type="radio" id="rt" name="vt" value=" Retailer"/>
+           <label for="rt" >Retailer</label>
+            
+        </fieldset>
+        <br><br>
+        <!--Registration status -->
+        <label for="status">Registration Status</label><br>
+        <input type="text" id="status" name="status" value="Pending Approval" disabled>
+        <br><br>
+        <!--Terms And Conditions-->
+        <input type="checkbox" id="ck" name="ck" value="accepted" required/>
+        <label for="ck" >I agree to the VendorMart terms and conditions.</label><br>
+        <br><br>
+        <!--Submit And Reset Buttons-->
+        <button type="submit">Register Vendor</button>
+        <button type="reset">Clear Form </button>
+        <br>
+        </form>
+        </section> 
+        <hr><!--Help Section-->   
+        <section id="help">
+        <h2>Need Help?</h2>
+        <p>New vendors can check our registration guidelines.</p><br>
+        <nav>
+        <a href="https://www.google.com" target="_blank">Vendor Registration Guide(Google)</a><br>
+        <br>
+        <a href="mailto:support@vendormart.com">Contact Support</a>
+        </nav>
+        
+        <hr>
+        <p>&copy;2026 VendorMart. All Rights Reserved.</p>
+        <a href="#registration">Back to Registration</a>
+    </section>
+
+    
+
+    
+
+</body>
+</html>
